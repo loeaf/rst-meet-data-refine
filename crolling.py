@@ -67,7 +67,7 @@ def selectByData(value):
     # create a cursor object to execute SQL queries
     cursor = cnx.cursor()
     # select query
-    query = 'SELECT id, road_address FROM restaurant'
+    query = 'SELECT id, road_address FROM restaurant WHERE refined_geo_location = 0'
     # execute the query
     cursor.execute(query)
     # fetch all the rows returned by the query
